@@ -1,0 +1,15 @@
+[
+  {
+    "id" : 0,
+    "type" : "sedan"
+  },
+   {
+    "id" : 1,
+    "type" : "SUV"
+  },
+   {
+    "id" : 2,
+    "type" : "sports car"
+  }
+]
+  
