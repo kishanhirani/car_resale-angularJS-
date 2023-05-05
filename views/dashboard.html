@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div ng-controller="dashCtrl" class="dashdiv">
+      <div class="adddiv">
+        <div class="filterbar">
+          <button
+            ng-click="suv()"
+            ng-class="{ 'active': lastClickedButton == 'suv()' }"
+            class="button-24"
+          >
+            suv
+          </button>
+          <button
+            ng-click="sedan()"
+            ng-class="{ 'active': lastClickedButton == 'sedan()' }"
+            class="button-24"
+          >
+            sedan
+          </button>
+          <button
+            ng-click="sports()"
+            ng-class="{ 'active': lastClickedButton == 'sports()' }"
+            class="button-24"
+          >
+            sports
+          </button>
+          <a href="" ng-click="reset()"
+            ><ion-icon name="close-circle-outline"></ion-icon
+          ></a>
+        </div>
+        <div class="div-a">
+          <a href="#!addcategory">add category</a>
+          <a href="#!add" class="addicon"
+            ><ion-icon name="add-circle-outline"></ion-icon
+          ></a>
+          <a href="" ng-click="reloadPage()"
+            ><ion-icon name="reload-circle-outline"></ion-icon
+          ></a>
+        </div>
+      </div>
+      <div>
+        <table class="car-table">
+          <thead>
+            <tr>
+              <th class="make" style="text-align: center">make</th>
+              <th class="model" style="text-align: center">Model</th>
+              <th class="year" style="text-align: center">Year</th>
+              <th class="color" style="text-align: center">Color</th>
+              <th class="price" style="text-align: center">Price</th>
+              <th class="modify" style="text-align: center">modify</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="car in cars" ng-click="goToDescription($index + 1)">
+              <td class="make">{{car.make}}</td>
+              <td class="model">{{car.model}}</td>
+              <td class="year">{{car.year}}</td>
+              <td class="color">{{car.color}}</td>
+              <td class="price">{{car.price}}</td>
+              <td class="modify">
+                <button ng-click="delete(car.id)"><ion-icon name="trash-outline"></ion-icon></button
+                ><a href="#!edit/{{car.id}}" class="edit-button"
+                  ><ion-icon name="create-outline"></ion-icon
+                ></a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="/js/route.js"></script>
+  </body>
+</html>

@@ -1,0 +1,416 @@
+body {
+  margin: 15px;
+  margin-top: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+.navbar {
+  position: fixed;
+  width: 98%;
+  z-index: 10;
+  align-items: center;
+  top: 0;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  border: 2px solid black;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
+  padding: 20px;
+}
+img {
+  height: 45px;
+}
+
+.info {
+  display: flex;
+}
+.info > p {
+  padding: 10px;
+}
+.infodiv {
+  height: 20px;
+  border-radius: 10px;
+  border: 2px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.edit-button {
+  font-size: 15px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Table Styles */
+.car-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.car-table th,
+.car-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.car-table th {
+  background-color: #333;
+  color: #fff;
+  text-align: left;
+}
+
+.car-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.car-table tbody tr:hover {
+  background-color: #ddd;
+}
+
+.dashdiv {
+  margin-top: 75px;
+  display: flex;
+  flex-direction: column;
+}
+
+.deletebutton {
+  border: none;
+  background: none;
+}
+
+.make {
+  width: 200px;
+  text-align: center;
+}
+.model {
+  width: 200px;
+  text-align: center;
+}
+.year {
+  width: 200px;
+  text-align: center;
+}
+.color {
+  width: 200px;
+  text-align: center;
+}
+.price {
+  width: 200px;
+  text-align: center;
+}
+.modify {
+  width: 200px;
+
+  text-align: center;
+}
+.adddiv {
+  display: flex;
+  justify-content: space-between;
+}
+.div-a {
+  margin-top: 18px;
+  margin-right: 48px;
+}
+.card {
+  display: inline-block;
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: fill;
+  margin-left: 0;
+  margin-right: 2px;
+}
+ion-icon {
+  font-size: 25px;
+}
+
+.card-info {
+  padding: 10px;
+}
+
+.card-info h3 {
+  margin-top: 0;
+}
+
+.card-info p {
+  margin: 5px 0;
+}
+.cardiv {
+  margin-left: 56px;
+  display: grid;
+  column-gap: 2px;
+
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+
+/* Style the form container */
+.maindiv {
+  margin-top: 75px;
+}
+.container {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin: 30px auto;
+  width: 430px;
+}
+
+.wrap {
+  background-color: #fbf7f4;
+  padding: 15px 25px;
+  border-top: 6px solid #7b9e87;
+  border-radius: 11px;
+}
+
+h1 {
+  text-align: center;
+  padding: 25px;
+}
+label {
+  display: block;
+  color: #254330;
+  padding: 10px;
+}
+
+/* input {
+    width: 90%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #eed2cc;
+    outline: none;
+  } */
+
+.submit {
+  margin: auto;
+  display: block;
+  width: 60%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #eed2cc;
+  border-radius: 11px;
+  font-size: 18px;
+  transition: 0.4s;
+}
+
+.submit:hover {
+  background-color: #cb9286;
+  box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.8);
+}
+
+.error {
+  padding: 0;
+  font-size: 10px;
+}
+
+.passwordlabel {
+  padding: 0;
+  margin: 0;
+  font-size: 10px;
+}
+
+.flag {
+  visibility: hidden;
+}
+
+.gender {
+  display: flex;
+  margin: 15px;
+  text-align: left;
+}
+input[type="radio"] {
+  margin: 0;
+  padding: 0;
+  width: 50px;
+}
+.submit-button {
+  margin-top: -25px;
+  margin-left: 100px;
+}
+.bn39 {
+  margin-left: 100px;
+  background-image: linear-gradient(135deg, #008aff, #86d472);
+  border-radius: 6px;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: block;
+  height: 50px;
+  font-size: 1.4em;
+  font-weight: 600;
+  padding: 4px;
+
+  text-decoration: none;
+  width: 7em;
+  z-index: 2;
+}
+
+.bn39:hover {
+  color: #fff;
+}
+
+.bn39 .bn39span {
+  align-items: center;
+  background: #0e0e10;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  transition: background 0.5s ease;
+  width: 100%;
+}
+
+.bn39:hover .bn39span {
+  background: transparent;
+}
+
+.searchbar {
+  height: 35px;
+  margin-right: 50px;
+  border-radius: 5px;
+}
+.typebar {
+  margin-left: 75px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.reset-bar {
+  display: inline-block;
+}
+.car-image {
+  border-radius: 25px;
+  margin-top: -25px;
+  width: 50px;
+}
+.button-24 {
+  margin-left: 10px;
+  margin-right: 10px;
+  gap: 25px;
+  width: 150px;
+  height: 45px;
+  border-radius: 25px;
+  font-size: 25px;
+}
+.button-24.active {
+  background-color: #7b9e87;
+  color: #fff;
+}
+.form input {
+  margin-left: 10px;
+  width: 80%;
+}
+
+.type-div {
+  display: flex;
+}
+.selectbar {
+  width: 150px;
+}
+.invalid {
+  border: 4px solid #e17654;
+}
+.add-btn {
+  cursor: pointer;
+  font-family: "inter";
+  height: 34px;
+  padding: 6px 26px;
+  font-style: normal;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffead0;
+  transition: 200ms all cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
+
+.card-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.product-content {
+  padding: 2rem 1rem;
+}
+.product-title {
+  font-size: 3rem;
+  text-transform: capitalize;
+  font-weight: 700;
+  position: relative;
+  color: #12263a;
+  margin: 1rem 0;
+}
+.product-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 80px;
+  background: #12263a;
+}
+.product-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 0.9rem;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  background: #256eff;
+  color: #fff;
+  padding: 0 0.3rem;
+  transition: all 0.5s ease;
+}
+.product-link:hover {
+  opacity: 0.9;
+}
+
+.product-price {
+  margin: 1rem 0;
+
+  font-weight: 700;
+}
+
+.new-price span {
+  color: #256eff;
+}
+
+.descimg {
+  margin-top: -100px;
+  height: 600px;
+  width: 1000px;
+}
+.imgdiv {
+  display: flex;
+  justify-content: center;
+}
+
+.new-price {
+  font-size: 25px;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resaler</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body ng-app="cars" ng-controller="myCtrl">
+    <div class="maindiv">
+      <nav class="navbar">
+        <div class="">
+          <a href="#!" class="logo"><img src="/images/logo.png" alt="" /></a>
+        </div>
+        <div class="butt">
+          <a href="#!"> Cars </a>
+          <a href="#!dashboard"> Dashboard </a>
+
+          <a href="#!about"> About </a>
+          <a href="#!contact"> Contact </a>
+        </div>
+      </nav>
+    </div>
+    <div>
+      <div ng-view></div>
+    </div>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.js"></script>
+    <script src="/js/controller.js"></script>
+    <script src="js/filter.js"></script>
+    <script src="js/route.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>

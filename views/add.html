@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ADD Product</title>
+  </head>
+  <body>
+    <div class="container" ng-controller="addCtrl">
+      <div class="wrap">
+        <h1>ADD CAR</h1>
+        <form name="addform" class="form">
+          <div id="form">
+            <div class="col">
+              <label for="make">Make</label>
+              <input
+                id="make"
+                class="fname"
+                name="make"
+                ng-model="make"
+                required
+                ng-class="{'invalid':addform.make.$touched && addform.make.$invalid}"
+              />
+            </div>
+            <div class="col">
+              <label for="model">Model </label>
+              <input
+                name="model"
+                id="model"
+                class="lname"
+                ng-model="model"
+                required
+                ng-class="{'invalid':addform.model.$touched && addform.model.$invalid}"
+              />
+            </div>
+            <div class="col">
+              <label for="year">Year</label>
+              <input
+                id="year"
+                class="phone"
+                name="year"
+                ng-model="year"
+                required
+                ng-class="{'invalid':addform.year.$touched && addform.year.$invalid}"
+              />
+            </div>
+            <div class="type-div">
+              <div>
+                <label for="type" class="selectbar">Type</label>
+                <select
+                  name="type"
+                  ng-model="type"
+                  ng-class="{'invalid':addform.type.$touched && addform.type.$invalid}"
+                >
+                  <option value="" disabled="disabled">Select car type...</option>
+                  <option value="{{category.type}}" ng-repeat="category in categories.category">
+                    {{category.type}}
+                  </option>
+                </select>
+              </div>
+              <div>
+                <label for="color">Color </label>
+                <input
+                  name="color"
+                  id="color"
+                  class="email"
+                  ng-model="color"
+                  required
+                  ng-class="{'invalid':addform.color.$touched && addform.color.$invalid}"
+                />
+              </div>
+            </div>
+            <div class="col">
+              <label for="price">Price </label>
+              <input
+                name="price"
+                type="text"
+                id="price"
+                class="password"
+                ng-model="price"
+                required
+                ng-class="{'invalid':addform.price.$touched && addform.price.$invalid}"
+              />
+            </div>
+            <div class="col">
+              <label for="image">Image(link) </label>
+              <input
+                name="image"
+                type="text"
+                id="image"
+                class="password"
+                ng-model="image"
+                ng-class="{'invalid':addform.image.$touched && addform.image.$invalid}"
+                required
+              />
+            </div>
+            <br />
+            <div class="col">
+              <span
+                class="error"
+                ng-show="addform.make.$invalid || addform.model.$invalid ||addform.type.$invalid || addform.price.$invalid|| addform.color.$invalid|| addform.image.$invalid"
+                >Please fill the input feilds</span
+              >
+              <button
+                class="add-btn"
+                ng-click="add()"
+                ng-disabled="addform.make.$invalid || addform.model.$invalid ||addform.year.$invalid || addform.price.$invalid || addform.type.$invalid || addform.image.$invalid"
+              >
+                <span class="bn39span"> Submit </span>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

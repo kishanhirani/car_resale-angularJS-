@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="product-content" ng-controller="descCtrl">
+      <div class="imgdiv">
+        <img
+          ng-src="{{car.image}}"
+          alt="{{car.make}} {{car.model}}"
+          class="descimg"
+        />
+      </div>
+
+      <h2 class="product-title">{{car.make}} {{car.model}}</h2>
+      <a href="#" class="product-link">visit store</a>
+
+      <div class="product-price">
+        <p class="new-price">Price: <span>${{car.price}}</span></p>
+        <h3 class="new-price">color: <span>{{car.color}}</span></h3>
+        <h3 class="new-price">year: <span>{{car.year}}</span></h3>
+        <p class="new-price">type: <span>{{car.type}}</span></p>
+      </div>
+    </div>
+  </body>
+</html>

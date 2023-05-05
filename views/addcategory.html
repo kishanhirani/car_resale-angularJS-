@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="category-container">
+      <form name="categoryForm" ng-submit="addCategory()">
+        <input
+          class="categoryInput"
+          type="text"
+          name="categoryInput"
+          ng-model="categoryInput"
+          required
+          pattern="^[a-zA-Z\s]{1,12}$"
+        />
+        <button
+          type="submit"
+          class="delete-button"
+          ng-disabled="categoryForm.categoryInput.$invalid"
+          ng-style="categoryForm.categoryInput.$invalid && {'opacity': '0.5', 'cursor': 'not-allowed'}"
+        >
+          add
+        </button>
+        <div>
+          <span
+            style="color: Red"
+            ng-show="categoryForm.categoryInput.$error.pattern"
+          >
+            Please enter a valid input with no more than 12 characters and
+            numbers.
+          </span>
+        </div>
+      </form>
+
+      <table>
+        <thead>
+          <th>ID</th>
+          <th>Categories</th>
+        </thead>
+        <tbody>
+          <tr
+            ng-repeat="category in model.category"
+            ng-include="getTemplate(category)"
+          ></tr>
+        </tbody>
+      </table>
+
+      <script type="text/ng-template" id="display">
+        <td>{{category.id}}</td>
+
+        <td>{{category.type}}</td>
+        <td>
+            <button ng-click="editCategory(category)" class="delete-button">Edit</button>
+            <button ng-click="deleteCategory(category.id)" class="delete-button">Delete</button>
+        </td>
+      </script>
+      <script type="text/ng-template" id="edit">
+        <td>{{category.id}}</td>
+        <td><input type="text" ng-model="model.selected.type" class="categoryInput" /></td>
+        <td>
+            <button ng-click="saveCategory($index)" class="delete-button">Save</button>
+            <button ng-click="reset()" class="delete-button">Cancel</button>
+        </td>
+      </script>
+    </div>
+  </body>
+</html>
+
